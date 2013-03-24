@@ -1,0 +1,12 @@
+[
+    {
+        "id": "radiologyApp",
+        "description": "XRay Application",
+        "extensionPoints": [
+            {
+                "id": "patientLinks"
+            }
+        ],
+        "contextModel": [ "xrayConceptId", "patientId" ]
+    }
+]
