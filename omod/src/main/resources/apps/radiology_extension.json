@@ -1,0 +1,10 @@
+[
+    {
+        "id": "gotoPatientExtension",
+        "appId": "radiologyApp",
+        "extensionPointId": "patientLinks",
+        "type": "link",
+        "label": "Goto Patient",
+        "url": "/openmrs/patientDashboardApp/patient.page?patientId={{patientId}}"
+    }
+]

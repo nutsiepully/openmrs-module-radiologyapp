@@ -1,4 +1,16 @@
 
+function getParameterByName(name)
+{
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(window.location.search);
+    if(results == null)
+        return "";
+    else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 require([
 //    '/openmrs/moduleResources/uiCommonsLibrary/scripts/main.js'
     '../../uiCommonsLibrary/scripts/main'
@@ -30,17 +42,17 @@ require([
     });
 
     require([
-        'radiologyApp/models/xray',
         'backbone',
-        'underscore',
-        'jquery'
-    ], function ( Xray, Backbone, _, $ ) {
+        'radiologyApp/routers/router',
+        'uiCommons/openmrs/extensions/extensionRenderer'
+    ], function ( Backbone, Router, ExtensionRenderer ) {
 
-        console.log(Xray);
-        console.log(Backbone);
-        console.log(_);
-        console.log($);
+        var router = new Router();
+        Backbone.history.start();
 
+        new ExtensionRenderer().renderExtensions(
+            'radiologyApp', 'patientLinks', '#patientLinks',
+            {xrayConceptId : '34', 'patientId' : '2' });
     });
 
 });
