@@ -35,7 +35,7 @@
 	<properties>
 		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <uiCommonsLibraryVersion>1.0-SNAPSHOT</uiCommonsLibraryVersion>
+        <uicommonsVersion>1.0-SNAPSHOT</uicommonsVersion>
     </properties>
 
 	<dependencyManagement>
@@ -55,8 +55,8 @@
 
             <dependency>
                 <groupId>org.openmrs.module</groupId>
-                <artifactId>uiCommonsLibrary-api</artifactId>
-                <version>${uiCommonsLibraryVersion}</version>
+                <artifactId>uicommons-api</artifactId>
+                <version>${uicommonsVersion}</version>
                 <scope>provided</scope>
             </dependency>
 

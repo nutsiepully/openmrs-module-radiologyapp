@@ -12,8 +12,8 @@ function getParameterByName(name)
 }
 
 require([
-//    '/openmrs/moduleResources/uiCommonsLibrary/scripts/main.js'
-    '../../uiCommonsLibrary/scripts/main'
+//    '/openmrs/moduleResources/uicommons/scripts/main.js'
+    '../../uicommons/scripts/main'
 ], function (main) {
 
     // Ensure main.js is loaded which sets up the main configuration.
